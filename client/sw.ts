@@ -1,11 +1,7 @@
-import type {
-  PrecacheEntry,
-  RuntimeCaching,
-  SerwistGlobalConfig,
-} from "serwist";
+import type { RuntimeCaching } from "serwist";
 import { Serwist } from "serwist";
 
-import { f1 } from "my-lib";
+import { f1 } from "./f1";
 
 const caching: RuntimeCaching = {
   matcher: ({ url }): boolean => {
@@ -16,15 +12,6 @@ const caching: RuntimeCaching = {
     return Promise.resolve(response);
   },
 };
-
-declare global {
-  interface WorkerGlobalScope extends SerwistGlobalConfig {
-    // Change this attribute's name to your `injectionPoint`.
-    // `injectionPoint` is an InjectManifest option.
-    // See https://serwist.pages.dev/docs/build/configuring
-    __SW_MANIFEST: (PrecacheEntry | string)[] | undefined;
-  }
-}
 
 declare const self: any;
 

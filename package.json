@@ -1,8 +1,25 @@
 {
-    "name": "my-monorepo",
-    "version": "1.0.0",
-    "private": true,
-    "scripts": {
-        "dev": "pnpm -r build"
-    }
+  "name": "my-nextjs-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@serwist/next": "^9.0.5",
+    "next": "14.2.6",
+    "react": "^18",
+    "react-dom": "^18",
+    "my-lib": "workspace:*",
+    "serwist": "^9.0.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "typescript": "^5"
+  }
 }
