@@ -1,0 +1,10 @@
+{
+  "name": "my-lib",
+  "type": "module",
+  "version": "1.0.0",
+  "sideEffects": false,
+  "main": "./index.js",
+  "module": "./index.js",
+  "types": "./index.d.ts",
+  "scripts": {}
+}
