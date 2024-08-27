@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next build"
+    "dev": "next build",
+    "build": "next build"
   },
   "dependencies": {
     "@serwist/next": "^9.0.5",
